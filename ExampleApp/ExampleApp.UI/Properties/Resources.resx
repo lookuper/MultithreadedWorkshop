@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,111 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Data" xml:space="preserve">
+    <value>Fuller|Vitae Erat Vivamus PC|(015013) 21033|Timor-Leste
+Isaiah|Sem Mollis Limited|07621 079179|Bhutan
+Dante|Nulla Tempor Corp.|(0101) 208 2703|Malawi
+Robert|Nulla In Limited|076 0600 2041|Zimbabwe
+Brady|Porttitor Tellus Non Corp.|(01672) 415890|Virgin Islands, United States
+Chancellor|Nulla Corp.|070 1984 6317|Antarctica
+Thor|Nunc Ltd|0845 46 41|Thailand
+Nathaniel|Dolor LLC|(01693) 247812|Malaysia
+Herman|Feugiat Non Lobortis Limited|0826 417 6655|Spain
+Zachery|Donec Vitae Erat Limited|0821 082 7951|Barbados
+Len|Volutpat PC|055 4134 3845|Antigua and Barbuda
+Aladdin|Duis Mi Enim Consulting|0882 779 4091|Swaziland
+Ira|Malesuada Ut Sem Corp.|07767 298531|Panama
+Baker|Tempor Associates|(024) 7157 2746|Niger
+Elton|Congue A Aliquet Foundation|0800 416978|Lebanon
+Lance|Fusce Dolor Foundation|(016977) 4448|Switzerland
+Akeem|Eleifend Nunc Inc.|0800 712501|Congo, the Democratic Republic of the
+Simon|Phasellus Libero Mauris Corp.|(0171) 677 2914|Czech Republic
+Brady|Eget LLC|(01935) 995202|Azerbaijan
+Hu|Eu Dolor Institute|(0116) 986 8856|Saint Lucia
+James|Orci PC|055 8716 7251|South Georgia and The South Sandwich Islands
+Scott|Donec Dignissim Magna Consulting|0800 927 7790|Bouvet Island
+Nissim|Amet Lorem Semper PC|(016977) 4270|China
+Kelly|Praesent Associates|(0116) 598 8013|Turkey
+Cain|Vel Company|(016977) 5645|Pitcairn Islands
+Anthony|Sagittis Duis Gravida Corporation|(016977) 6306|Saint Martin
+Jack|Turpis Associates|0371 260 7407|Argentina
+Walker|Tristique Institute|(011478) 48510|New Zealand
+Channing|Erat Industries|(0171) 205 9065|Costa Rica
+Raja|Consequat Purus Maecenas Institute|(0131) 491 2580|Botswana
+Omar|Aliquam Auctor Velit Corp.|0816 816 5905|Brazil
+Aladdin|Aliquam Arcu Aliquam LLC|0932 289 3783|Saudi Arabia
+Ryan|Eu Erat Associates|0827 100 7253|Turkmenistan
+Clarke|Velit Eu Incorporated|(022) 8669 4609|Nigeria
+Lars|Tellus Suspendisse Limited|07624 178317|Belize
+Hiram|Magna A Tortor PC|0800 1111|Uzbekistan
+Rashad|Fusce Industries|0942 538 1124|Japan
+James|Libero Est Associates|(01698) 027854|Djibouti
+Avram|Sed Eu Eros Foundation|07021 883824|Iran
+Andrew|Ut Cursus Foundation|0818 610 1199|Palestine, State of
+Boris|Bibendum Ullamcorper Duis Company|(016977) 9468|British Indian Ocean Territory
+Wade|Velit Inc.|0359 462 3406|Suriname
+Vincent|Faucibus Id Corp.|(0111) 023 7129|Czech Republic
+Fritz|A PC|0800 590 4573|Austria
+Amir|Pellentesque Foundation|0905 501 1431|Mali
+Gil|Interdum Feugiat Corp.|(0114) 969 9189|Sierra Leone
+Dieter|Dui Semper Associates|(016290) 88553|Belgium
+Axel|Nisl Limited|0500 754065|Bahrain
+Ulric|Eu Odio Institute|(028) 0258 6728|Swaziland
+Rajah|Adipiscing Non Luctus LLC|(023) 2448 5424|Faroe Islands
+Nasim|Lacus Associates|0845 46 47|Congo, the Democratic Republic of the
+Keane|Suspendisse Aliquet Molestie Corporation|076 1078 2888|Switzerland
+Nero|Id Risus Quis Company|056 6233 3100|French Guiana
+Phillip|Et Nunc Quisque Foundation|(01488) 79656|Montserrat
+Keegan|Lectus Ltd|(01299) 28806|Montserrat
+Hall|Pellentesque Massa Foundation|0840 255 3939|Tuvalu
+Joseph|Feugiat Tellus Lorem Incorporated|(0111) 648 2952|Barbados
+Timothy|Blandit Viverra LLP|(0111) 497 1000|Saint Helena, Ascension and Tristan da Cunha
+Nigel|Lobortis Mauris Institute|0800 270 4290|Montserrat
+August|Quisque Nonummy Industries|0359 589 6475|Argentina
+Bradley|Sollicitudin A Malesuada Associates|0500 479178|Israel
+Xander|Nulla Magna Limited|(0116) 530 2993|Russian Federation
+Barry|Eros Consulting|07475 012358|Malaysia
+Flynn|Turpis Egestas Associates|(01719) 35282|Ireland
+Xanthus|Et Netus Limited|055 9060 4796|Burkina Faso
+Xavier|Nec Diam Corporation|(01520) 460637|Azerbaijan
+Abel|Nullam Enim LLP|07436 631712|Luxembourg
+Rashad|Pharetra Inc.|0357 027 6012|French Guiana
+Howard|Donec Tincidunt Foundation|(017486) 19999|Bangladesh
+Odysseus|In Foundation|055 9067 6896|Cayman Islands
+Jacob|Arcu Eu Odio LLP|(0121) 973 7520|Ã…land Islands
+Oleg|Amet LLP|0800 1111|Malawi
+Marvin|Donec Consectetuer Mauris Corporation|(01109) 737625|Austria
+Brian|Odio LLP|07624 375205|Guernsey
+Keane|Morbi Non Sapien LLC|056 1875 4789|Montserrat
+Lev|Praesent Eu Consulting|0310 954 7533|Andorra
+Beau|Non Massa Non Corp.|(029) 7586 9848|Zambia
+Mason|Magna Suspendisse Tristique Consulting|07624 799535|Kyrgyzstan
+Herman|Accumsan Limited|07986 978667|Indonesia
+Plato|Magna Cras Convallis Corporation|070 1407 9864|Sierra Leone
+Brody|Interdum Industries|07861 547320|Tajikistan
+Phelan|Ornare Placerat Orci Company|0800 1111|Philippines
+Sylvester|Nec Ante Consulting|055 5818 0704|Micronesia
+Chaim|Sit Amet Dapibus Foundation|(01584) 58962|Vanuatu
+Fulton|Ultrices Posuere LLP|056 4237 9084|Israel
+Julian|Nonummy Corporation|0301 680 3599|Denmark
+Prescott|Nascetur Associates|0952 493 3720|San Marino
+Keaton|Ac Libero Nec LLP|07624 711248|CuraÃ§ao
+Brendan|Odio Vel PC|(01461) 03388|Albania
+Keith|Vitae Associates|07225 574458|Samoa
+Allen|Vestibulum Corporation|076 5843 9988|South Georgia and The South Sandwich Islands
+Allen|Suspendisse Institute|(0119) 033 9781|Comoros
+Mufutau|Urna Convallis Ltd|(01259) 28132|Angola
+Hamish|Nunc Limited|0919 341 4290|Afghanistan
+Abbot|Non Lorem Vitae Consulting|0800 594034|Monaco
+Guy|Ultrices Limited|055 2855 6180|Oman
+Steel|Eu Dui Corp.|(01898) 96623|Algeria
+Aaron|Ac Sem Ut Corporation|0800 803 3046|Nepal
+Mufutau|Id Mollis Limited|(01210) 062097|Mayotte
+Dorian|Natoque Inc.|0815 272 9232|Christmas Island</value>
+  </data>
 </root>

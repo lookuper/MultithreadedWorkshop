@@ -23,6 +23,17 @@ namespace ExampleApp.UI
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+
+        private void AboutClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ExitClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

@@ -2,12 +2,70 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:this="clr-namespace:ExampleApp.UI"
-        Title="ExampleApp" Height="350" Width="525">
+        Name="mainWindow"
+        Title="ExampleApp" Height="620" Width="865">
     <Window.DataContext>
         <this:ViewModel/>
     </Window.DataContext>
     
     <DockPanel>
+        <Menu DockPanel.Dock="Top" Width="Auto" Height="20">
+            <MenuItem Header="Main">
+                <MenuItem Header="Exit" Click="ExitClick"/>
+            </MenuItem>
+            <MenuItem Header="About" Click="AboutClick"/>
+        </Menu>
+        
+        <StatusBar DockPanel.Dock="Bottom" Height="25" VerticalAlignment="Bottom">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Orientation="Horizontal" Grid.Column="0">
+                    <Separator Width="1"/>
+                    <TextBlock Text="Load time: "/>
+                    <TextBlock Text="{Binding LoadTime, StringFormat='{}{0:hh\\:mm\\:ss}'}"/>
+                </StackPanel>
+            </Grid>
+        </StatusBar>
+        
+        <DockPanel>
+            
+            <GroupBox Header="Name Search" DockPanel.Dock="Left" Margin="1">
+                <StackPanel>
+                    <TextBox Width="250" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" />
+                    <GroupBox Header="Search Result" MaxWidth="250" Height="{Binding ElementName=mainWindow, Path=Height}" >
+                        <DataGrid ItemsSource="{Binding SearchResult}" >
+
+                        </DataGrid>
+                    </GroupBox>
+                </StackPanel>
+            </GroupBox>
+                
+            <GroupBox Width="160" Header="Contols" DockPanel.Dock="Right">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Delay (ms): " HorizontalContentAlignment="Left"/>
+                        <TextBox Width="75" VerticalAlignment="Center" Text="{Binding DelayMilliseconds, FallbackValue=100, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Right"/>
+                    </StackPanel>
+                    <Button Content="Load" Margin="1" Command="{Binding LoadDataCommand}" />
+                    <Button Content="Load Sequence" Margin="1" Command="{Binding LoadDataSequenceCommand}" />
+                    <Button Content="Cancel" Margin="1" Command="{Binding CancelCommand}" />
+                    <Button Content="Clear" Margin="1" Command="{Binding ClearCommand}"/>
+                    <ProgressBar DockPanel.Dock="Bottom" Height="18" Margin="1,5,1,1" IsIndeterminate="{Binding RequestRunning}"/>
+                </StackPanel>
+            </GroupBox>
+            
+            <GroupBox Header="Data">
+                <DataGrid ItemsSource="{Binding AllData}"
+                    AlternatingRowBackground="Gainsboro"  AlternationCount="2">                    
+                </DataGrid>
+            </GroupBox>
+        </DockPanel>        
         
     </DockPanel>
 </Window>

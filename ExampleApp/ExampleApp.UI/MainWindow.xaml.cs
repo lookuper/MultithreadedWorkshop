@@ -28,7 +28,12 @@ namespace ExampleApp.UI
 
         private void AboutClick(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("ExampleApp created for Multithreaded workshop",
+                "About",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information,
+                MessageBoxResult.OK,
+                MessageBoxOptions.None);
         }
 
         private void ExitClick(object sender, RoutedEventArgs e)

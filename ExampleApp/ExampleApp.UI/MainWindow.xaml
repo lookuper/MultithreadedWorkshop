@@ -56,7 +56,10 @@
                     <Button Content="Load Sequence" Margin="1" Command="{Binding LoadDataSequenceCommand}" />
                     <Button Content="Cancel" Margin="1" Command="{Binding CancelCommand}" />
                     <Button Content="Clear" Margin="1" Command="{Binding ClearCommand}"/>
-                    <ProgressBar DockPanel.Dock="Bottom" Height="18" Margin="1,5,1,1" IsIndeterminate="{Binding RequestRunning}"/>
+                    <ProgressBar DockPanel.Dock="Bottom" Height="18"
+                                 Margin="1,5,1,1" Minimum="0" Maximum="100"
+                                 Value="{Binding WorkDone}"
+                                 IsIndeterminate="{Binding RequestRunning}"/>
                 </StackPanel>
             </GroupBox>
             

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,6 +51,43 @@ namespace ExampleApp.Model
             {
                 Thread.Sleep(delay);
                 output.Add(item);
+            }
+        }
+
+        public ICollection<UserDto> GetDataSequenceAsync(string data, TimeSpan delay, IProgress<double> progress)
+        {
+            var output = new List<UserDto>();
+            GetDataSequence(data, TimeSpan.Zero, output);
+
+            var onePercent = output.Count / 100;
+
+            foreach (var item in output)
+            {
+                progress.Report(onePercent);
+                onePercent += onePercent;
+
+                Thread.Sleep(delay);
+            }
+
+            return output;
+        }
+
+        public async void GetDataSequenceAsync(string data, TimeSpan delay, IProgress<double> progress, ICollection<UserDto> allData, CancellationToken token)
+        {
+            var output = GetData(data, TimeSpan.Zero);
+            var onePercent = output.Count / 100;
+            double totalPercents = 1;
+
+            foreach (var item in output)
+            {
+                if (token.IsCancellationRequested)
+                    return;
+
+                await Task.Delay(delay);
+                allData.Add(item);
+
+                progress.Report(totalPercents);
+                totalPercents += onePercent;
             }
         }
     }

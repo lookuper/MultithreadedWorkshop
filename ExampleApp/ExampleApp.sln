@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.22310.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApp.UI", "ExampleApp.UI\ExampleApp.UI.csproj", "{7688E2AC-CD58-470F-A0D8-E928BF1C4354}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApp.Model", "ExampleApp.Model\ExampleApp.Model.csproj", "{1A82BF6C-3724-49CE-9658-986F656A3A04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots", "{6B8350AA-4A8B-401F-AB12-937855BC5942}"
+	ProjectSection(SolutionItems) = preProject
+		screenshots\ExampleApp.png = screenshots\ExampleApp.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

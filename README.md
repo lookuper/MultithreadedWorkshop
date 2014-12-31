@@ -9,4 +9,4 @@ Requirenments:
   Visual Studio 2013+
 
 Screenshot:
-![Alt text](/MultithreadedWorkshop/ExampleApp/screenshots/ExampleApp.png "ExampleApp")
+![Alt text](/ExampleApp/screenshots/ExampleApp.png "ExampleApp")

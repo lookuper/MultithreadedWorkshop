@@ -12,6 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "screenshots", "screenshots"
 		screenshots\ExampleApp.png = screenshots\ExampleApp.png
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linqpad snippets", "linqpad snippets", "{0A24E591-89C0-476B-8155-AB5216BCD9C8}"
+	ProjectSection(SolutionItems) = preProject
+		linqpad snippets\Ex1.linq = linqpad snippets\Ex1.linq
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

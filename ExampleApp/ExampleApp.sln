@@ -22,7 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linqpad snippets", "linqpad
 		linqpad snippets\Ex6.linq = linqpad snippets\Ex6.linq
 		linqpad snippets\Ex7.linq = linqpad snippets\Ex7.linq
 		linqpad snippets\Ex8.linq = linqpad snippets\Ex8.linq
+		linqpad snippets\Ex9.linq = linqpad snippets\Ex9.linq
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{555A7A77-6622-440F-B1D9-0A71D53118C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

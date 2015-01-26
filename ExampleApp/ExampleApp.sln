@@ -15,6 +15,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linqpad snippets", "linqpad snippets", "{0A24E591-89C0-476B-8155-AB5216BCD9C8}"
 	ProjectSection(SolutionItems) = preProject
 		linqpad snippets\Ex1.linq = linqpad snippets\Ex1.linq
+		linqpad snippets\Ex10.linq = linqpad snippets\Ex10.linq
 		linqpad snippets\Ex2.linq = linqpad snippets\Ex2.linq
 		linqpad snippets\Ex3.linq = linqpad snippets\Ex3.linq
 		linqpad snippets\Ex4.linq = linqpad snippets\Ex4.linq

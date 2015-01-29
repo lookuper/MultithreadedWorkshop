@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linqpad snippets", "linqpad
 		linqpad snippets\Ex1.linq = linqpad snippets\Ex1.linq
 		linqpad snippets\Ex10.linq = linqpad snippets\Ex10.linq
 		linqpad snippets\Ex11.linq = linqpad snippets\Ex11.linq
+		linqpad snippets\Ex12.linq = linqpad snippets\Ex12.linq
 		linqpad snippets\Ex2.linq = linqpad snippets\Ex2.linq
 		linqpad snippets\Ex3.linq = linqpad snippets\Ex3.linq
 		linqpad snippets\Ex4.linq = linqpad snippets\Ex4.linq

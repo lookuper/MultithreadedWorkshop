@@ -1,4 +1,6 @@
-<Query Kind="Program" />
+<Query Kind="Program">
+  <Namespace>System.Threading.Tasks</Namespace>
+</Query>
 
 void Main()
 {
@@ -17,7 +19,7 @@ void Main()
     
      t.Wait();
      Console.WriteLine ("snippet end");
-     var t = Task.Factory.StartNew(() =>
+     var t3 = Task.Factory.StartNew(() =>
      {
             Console.WriteLine ("task 1");
             var t2 = Task.Factory.StartNew(() =>
@@ -29,6 +31,6 @@ void Main()
             Console.WriteLine ("task 1 end");
      }, TaskCreationOptions.LongRunning);
     
-     t.Wait();
+     t3.Wait();
      Console.WriteLine ("snippet end");
 }

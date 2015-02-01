@@ -1,4 +1,6 @@
-<Query Kind="Program" />
+<Query Kind="Program">
+  <Namespace>System.Threading.Tasks</Namespace>
+</Query>
 
 void Main()
 {

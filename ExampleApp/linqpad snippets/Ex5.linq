@@ -4,7 +4,7 @@
 
 void Main()
 {
-	// ex 5
+	// ex 5, gracefully cancellation
     var c = new CancellationTokenSource();
     var t = Task.Factory.StartNew(() =>
     {
@@ -14,8 +14,6 @@ void Main()
                  
            Console.WriteLine ("test");
     }, c.Token);
-         c.Cancel();
-		 
-    SynchronizationContext.Current.Dump();
-    ExecutionContext.Capture().Dump();
+	
+   	c.Cancel();
 }

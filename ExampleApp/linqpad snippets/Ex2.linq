@@ -4,7 +4,7 @@
 
 void Main()
 {
-	 // ex2
+	 // ex2, crate using contrstructor with return value
      var t = new Task<int>(() =>
      {
             return 5;

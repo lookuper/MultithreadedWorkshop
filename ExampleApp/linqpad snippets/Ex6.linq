@@ -4,7 +4,7 @@
 
 void Main()
 {
-	 // ex 6
+	 // ex 6, cancellation with OperationCancelledException
      var c = new CancellationTokenSource();
      var token = c.Token;
      var t = Task.Factory.StartNew(() =>

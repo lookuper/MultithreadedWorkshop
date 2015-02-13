@@ -4,7 +4,8 @@
 
 void Main()
 {
-       // ex10
+     // ex10, task attached/deattached inner tasks
+	 // attached
      var t = Task.Factory.StartNew(() =>
      {
             Console.WriteLine ("task 1");
@@ -19,18 +20,19 @@ void Main()
     
      t.Wait();
      Console.WriteLine ("snippet end");
-     var t3 = Task.Factory.StartNew(() =>
-     {
-            Console.WriteLine ("task 1");
-            var t2 = Task.Factory.StartNew(() =>
-            {
-                   Thread.Sleep(TimeSpan.FromSeconds(3));
-                   Console.WriteLine ("task 2 end");
-            });
-           
-            Console.WriteLine ("task 1 end");
-     }, TaskCreationOptions.LongRunning);
-    
-     t3.Wait();
-     Console.WriteLine ("snippet end");
+	 //-- deattached
+//     var t3 = Task.Factory.StartNew(() =>
+//     {
+//            Console.WriteLine ("task 1");
+//            var t2 = Task.Factory.StartNew(() =>
+//            {
+//                   Thread.Sleep(TimeSpan.FromSeconds(3));
+//                   Console.WriteLine ("task 2 end");
+//            });
+//           
+//            Console.WriteLine ("task 1 end");
+//     }, TaskCreationOptions.LongRunning);
+//    
+//     t3.Wait();
+//     Console.WriteLine ("snippet end");
 }

@@ -10,16 +10,14 @@ void Main()
 	// ex 1, create using Task costructor
 		var t = new Task(() =>
 		{
-			Console.WriteLine ("test");
+			Console.WriteLine ("responce");
 		});
 		
 		t.Status.Dump();
 		
-		t.Start();
-		t.Status.Dump();
-		t.Wait();
-		
-		t.Status.Dump();
+//		t.Start();
+//		t.Status.Dump();
+//		t.Wait();
+//		
+//		t.Status.Dump();
 }
-
-// Define other methods and classes here

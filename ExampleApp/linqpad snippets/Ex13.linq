@@ -2,10 +2,10 @@
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
 
-void Main()
+async void Main()
 {
-     // ex 13 with async/await
+     // ex 13, async/await flow
      Console.WriteLine ("start");
-     Task.Delay(TimeSpan.FromSeconds(3));
+     await Task.Delay(TimeSpan.FromSeconds(3));
      Console.WriteLine ("end");
 }

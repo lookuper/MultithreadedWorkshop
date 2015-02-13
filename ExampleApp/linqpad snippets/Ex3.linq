@@ -4,7 +4,7 @@
 
 void Main()
 {
-	 //ex3
+	 //ex3, create using Factory method
      var t = Task.Factory.StartNew((state) =>
      {
             return state != null;

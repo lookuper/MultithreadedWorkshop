@@ -4,7 +4,7 @@
 
 void Main()
 {
-     // ex12
+     // ex12, delay before excecution in task thread
      Task.Delay(TimeSpan.FromSeconds(2))
      .ContinueWith(res =>
      {
@@ -12,5 +12,4 @@ void Main()
      });
     
      Console.WriteLine ("end");
-     TaskScheduler.Default.Dump();
 }

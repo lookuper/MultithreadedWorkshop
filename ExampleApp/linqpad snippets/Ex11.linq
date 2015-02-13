@@ -4,7 +4,7 @@
 
 void Main()
 {
-     // ex11
+     // ex11, Factory static methods ContinueWhen...
      var t1 = Task.Factory.StartNew(() =>
      {
             return "task 1";

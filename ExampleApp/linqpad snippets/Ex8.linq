@@ -4,7 +4,7 @@
 
 void Main()
 {
-	 // ex8
+	 // ex8, task continuation
      Thread.CurrentThread.ManagedThreadId.Dump();
      var t = Task.Factory.StartNew(() =>
      {

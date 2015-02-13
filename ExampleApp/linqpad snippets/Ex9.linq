@@ -4,7 +4,7 @@
 
 void Main()
 {
-     // ex9
+     // ex9, continuation options
      var t = Task.Factory.StartNew(() =>
      {
             throw new NotImplementedException();

@@ -190,6 +190,7 @@ namespace ExampleApp.UI
 
             Utils.Async(
                 () => {
+                    Thread.Sleep(TimeSpan.FromMilliseconds(DelayMilliseconds));
                     return AllData.Where(x => x.Name.ToLower().Contains(_searchText.ToLower()))
                       .OrderBy(x => x.Name)
                       .ToList();

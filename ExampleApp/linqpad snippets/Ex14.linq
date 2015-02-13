@@ -2,10 +2,10 @@
   <Namespace>System.Threading.Tasks</Namespace>
 </Query>
 
-void Main()
+async void Main()
 {
-	// Ex14
-     var t = AsynOperation(() =>
+	// Ex14, advanced await example
+     await AsynOperation(() =>
      {
             Thread.Sleep(TimeSpan.FromSeconds(3));
             Console.WriteLine ("test");
@@ -16,5 +16,5 @@ void Main()
 
 private static Task AsynOperation(Action action)
 {
-	return Task.Delay(TimeSpan.FromSecond(1));
+	return Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((res) => action());	
 }

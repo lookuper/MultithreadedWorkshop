@@ -4,7 +4,7 @@
 
 void Main()
 {
-     // ex 7
+     // ex 7, catch exception from task in current thread
      var t = Task.Factory.StartNew(() =>
      {
             Thread.Sleep(TimeSpan.FromSeconds(1));

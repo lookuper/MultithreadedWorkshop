@@ -36,11 +36,11 @@ namespace ExampleApp.UI
             set { _delayMilliseconds = value; OnPropertyChanged("DelayMilliseconds"); }
         }
 
-        private bool _requestRunning;
-        public bool RequestRunning
+        private double _workDone;
+        public double WorkDone
         {
-            get { return _requestRunning; }
-            set { _requestRunning = value; OnPropertyChanged("RequestRunning"); }
+            get { return _workDone; }
+            set { _workDone = value; OnPropertyChanged("WorkDone"); }
         }
 
         private IEnumerable<UserDto> _allData;
@@ -78,26 +78,27 @@ namespace ExampleApp.UI
 
         private void CancelHandler(object obj)
         {
-            RequestRunning = false;
+            WorkDone = 0;
         }
 
         private void ClearHandler(object obj)
         {
             AllData = null;
             SearchResult = null;
+            WorkDone = 0;
         }
 
         private void LoadDataSequenceHandler(object obj)
         {
-            RequestRunning = true;
             AllData = new ObservableCollection<UserDto>();
             _model.GetDataSequence(Properties.Resources.Data, TimeSpan.FromMilliseconds(DelayMilliseconds), AllData);
+            WorkDone = 100;
         }
 
         private void LoadDataHandler(object obj)
         {
-            RequestRunning = true;
             LoadData(DelayMilliseconds);
+            WorkDone = 100;
         }
 
         private void LoadData(uint delayMilliseconds)

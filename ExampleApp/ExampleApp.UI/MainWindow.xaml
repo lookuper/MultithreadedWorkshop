@@ -5,7 +5,7 @@
         Name="mainWindow"
         Title="ExampleApp" Height="620" Width="865">
     <Window.DataContext>
-        <this:ViewModel/>
+        <this:ViewModelAsync/>
     </Window.DataContext>
     
     <DockPanel>

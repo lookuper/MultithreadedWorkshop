@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ReactiveUI;
 using Splat;
 using System.Reactive.Linq;
+using System.Windows.Input;
 
 namespace ExampleApp.UI
 {
@@ -20,7 +21,6 @@ namespace ExampleApp.UI
             get { return _loadTime; }
             set { this.RaiseAndSetIfChanged(ref _loadTime, value); }
         }
-
 
         private uint _delayMilliseconds;
         public uint DelayMilliseconds
@@ -57,7 +57,8 @@ namespace ExampleApp.UI
 
         public ReactiveCommand<List<UserDto>> LoadDataCommand { get; set; }
         public ReactiveCommand<List<UserDto>> LoadDataSequenceCommand { get; set; }
-        
+        public ICommand ClearCommand { get; set; }
+
         public Task<List<UserDto>> GetDataTask()
         {
             return Task.Run(() =>
@@ -68,6 +69,7 @@ namespace ExampleApp.UI
 
         public ViewModelReactive()
         {
+            DelayMilliseconds = 25;
             AllData = new ReactiveList<UserDto>();
             SearchResult = new ReactiveList<UserDto>();
             _progress = new Progress<double>((input) =>
@@ -75,6 +77,7 @@ namespace ExampleApp.UI
                 WorkDone = input;
             });
 
+            ClearCommand = new RelayCommand<Object>(ClearHandler);
             var canSearch = this.WhenAny(x => x.SearchText, x => !String.IsNullOrEmpty(x.Value));
             var canLoad = Observable.Return(true);
 
@@ -127,6 +130,16 @@ namespace ExampleApp.UI
             this.WhenAnyValue(x => x.SearchText)
                 .Throttle(TimeSpan.FromSeconds(1))
                 .InvokeCommand(this, x => x.Search);
+        }
+
+        private void ClearHandler(object obj)
+        {
+            //CancelHandler(this);
+            LoadTime = TimeSpan.Zero;
+            AllData.Clear(); ;
+            SearchResult.Clear();
+            (_progress as IProgress<Double>).Report(0);
+            WorkDone = 0;
         }
     }
 }

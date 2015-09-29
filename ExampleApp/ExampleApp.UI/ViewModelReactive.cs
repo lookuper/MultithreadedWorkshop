@@ -69,9 +69,10 @@ namespace ExampleApp.UI
 
         public ViewModelReactive()
         {
-            DelayMilliseconds = 25;
+            DelayMilliseconds = 20;
             AllData = new ReactiveList<UserDto>();
             SearchResult = new ReactiveList<UserDto>();
+
             _progress = new Progress<double>((input) =>
             {
                 WorkDone = input;
@@ -91,6 +92,7 @@ namespace ExampleApp.UI
                         .ToList();
                 });                 
             });
+
             Search.Subscribe(res =>
             {
                 SearchResult.Clear();
@@ -134,9 +136,8 @@ namespace ExampleApp.UI
 
         private void ClearHandler(object obj)
         {
-            //CancelHandler(this);
             LoadTime = TimeSpan.Zero;
-            AllData.Clear(); ;
+            AllData.Clear();
             SearchResult.Clear();
             (_progress as IProgress<Double>).Report(0);
             WorkDone = 0;

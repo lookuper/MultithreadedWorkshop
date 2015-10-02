@@ -35,10 +35,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linqpad reactive snippets", "linqpad reactive snippets", "{AC3FBA36-5480-4683-A8B2-0A1A4E22FEB1}"
 	ProjectSection(SolutionItems) = preProject
 		linqpad reactive snippets\Ex1.linq = linqpad reactive snippets\Ex1.linq
+		linqpad reactive snippets\Ex10.linq = linqpad reactive snippets\Ex10.linq
 		linqpad reactive snippets\Ex2.linq = linqpad reactive snippets\Ex2.linq
 		linqpad reactive snippets\Ex3.linq = linqpad reactive snippets\Ex3.linq
 		linqpad reactive snippets\Ex4.linq = linqpad reactive snippets\Ex4.linq
 		linqpad reactive snippets\Ex5.linq = linqpad reactive snippets\Ex5.linq
+		linqpad reactive snippets\Ex6.linq = linqpad reactive snippets\Ex6.linq
+		linqpad reactive snippets\Ex7.linq = linqpad reactive snippets\Ex7.linq
+		linqpad reactive snippets\Ex8.linq = linqpad reactive snippets\Ex8.linq
+		linqpad reactive snippets\Ex9.linq = linqpad reactive snippets\Ex9.linq
 		readme.txt = readme.txt
 	EndProjectSection
 EndProject

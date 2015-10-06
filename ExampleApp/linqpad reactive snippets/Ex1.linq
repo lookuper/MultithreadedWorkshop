@@ -5,7 +5,7 @@
 
 void Main()
 {
-	// create observer
+	// create simple observer
 	var o = Observer.Create<int>(
 		value => value.Dump(),
 		error => error.Message.Dump(), 
@@ -13,9 +13,7 @@ void Main()
 		
 	o.OnNext(5);
 	o.OnNext(6);
-	o.OnError(new NotImplementedException());
+	//o.OnError(new NotImplementedException());
 	o.OnNext(7);
 	o.OnCompleted();
 }
-
-// Define other methods and classes here

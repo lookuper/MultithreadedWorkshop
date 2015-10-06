@@ -21,5 +21,3 @@ void Main()
 	Console.WriteLine ("Midle");
 	subscription.Dispose();
 }
-
-// Define other methods and classes here

@@ -16,5 +16,3 @@ void Main()
 	var subscription = source.Subscribe(observer);
 	Console.WriteLine ("end");
 }
-
-// Define other methods and classes here

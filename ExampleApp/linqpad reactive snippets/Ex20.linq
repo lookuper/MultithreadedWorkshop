@@ -19,5 +19,3 @@ void Main()
 		.TimeInterval()
 		.Dump();
 }
-
-// Define other methods and classes here

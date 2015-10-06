@@ -7,7 +7,7 @@
 
 void Main()
 {
-	// DistinctUntilChanged example
+	// DistinctUntilChanged example (will surface values only if they are different from the previous value)
 	var subject = new Subject<int>();
 	var distinct = subject.DistinctUntilChanged();
 	subject.Subscribe(Console.WriteLine);
@@ -19,5 +19,3 @@ void Main()
 	subject.OnNext(1);
 	subject.OnNext(2);
 }
-
-// Define other methods and classes here

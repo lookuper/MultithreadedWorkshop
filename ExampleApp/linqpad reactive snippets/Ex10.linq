@@ -16,5 +16,3 @@ void Main()
 	subject.OnNext("A");	
 	subject.Subscribe(observer);
 }
-
-// Define other methods and classes here

@@ -1,24 +1,20 @@
 <Query Kind="Program">
   <NuGetReference>Rx-Main</NuGetReference>
   <Namespace>System.Reactive</Namespace>
+  <Namespace>System.Reactive.Linq</Namespace>
   <Namespace>System.Reactive.Subjects</Namespace>
 </Query>
 
 void Main()
 {
-	// replay subject example
-	var observer = Observer.Create<String>(
-		value => value.Dump(),
-		error => error.Message.Dump(),
-		() => "Completed".Dump());
-		
-	var subject = new ReplaySubject<String>(1);
-	subject.OnNext("A");
-	subject.OnNext("B");
-	subject.Subscribe(observer);
+	// observable start example
+	var start = Observable.Start(() =>
+	{
+		Thread.Sleep(2000);
+		Console.WriteLine ("Inner Thread Id: {0}", Thread.CurrentThread.ManagedThreadId);
+		return "test";
+	});
 	
-	subject.OnNext("C");
-	subject.OnCompleted();
+	start.Subscribe(Console.WriteLine, () => Console.WriteLine ("end"));
+	Console.WriteLine ("Main Thread Id: {0}", Thread.CurrentThread.ManagedThreadId);
 }
-
-// Define other methods and classes here

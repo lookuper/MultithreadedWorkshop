@@ -14,5 +14,3 @@ void Main()
 	source.SubscribeOn(Scheduler.ThreadPool)
 		.Subscribe(value => Console.WriteLine ("Thread Id: " + Thread.CurrentThread.ManagedThreadId));
 }
-
-// Define other methods and classes here

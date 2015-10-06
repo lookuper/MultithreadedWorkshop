@@ -32,5 +32,3 @@ void Main()
 		.Take(2)
 		.Subscribe(Console.WriteLine);
 }
-
-// Define other methods and classes here

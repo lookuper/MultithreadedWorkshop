@@ -6,7 +6,7 @@
 
 void Main()
 {
-	// list to observable
+	// Enumberable to Observable
 	var list = new List<int>{1,2,3,4,5};
 	var source = list.ToObservable();
 	var subscription = source.Subscribe(
@@ -14,5 +14,3 @@ void Main()
 		error => Console.WriteLine ("OnError: {0}", error.Message),
 		() => Console.WriteLine ("OnCompleted"));
 }
-
-// Define other methods and classes here

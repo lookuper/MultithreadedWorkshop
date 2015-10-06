@@ -17,5 +17,3 @@ void Main()
 	o.OnNext(7);
 	o.OnCompleted();
 }
-
-// Define other methods and classes here

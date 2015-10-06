@@ -22,5 +22,3 @@ void Main()
 	Thread.Sleep(2100);
 	subscription.Dispose();
 }
-
-// Define other methods and classes here

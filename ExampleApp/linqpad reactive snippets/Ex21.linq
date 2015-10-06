@@ -13,5 +13,3 @@ void Main()
 		.Do(value => value.Dump());
 	source.Subscribe();
 }
-
-// Define other methods and classes here

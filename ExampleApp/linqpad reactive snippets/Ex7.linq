@@ -6,7 +6,7 @@
 
 void Main()
 {
-	//interval example
+	// interval example
 	var timerSpawn = Observable
 		.Interval(TimeSpan.FromSeconds(1))
 		.Take(5);
@@ -18,5 +18,3 @@ void Main()
 		
 	var subscription = timerSpawn.Subscribe(consoleObserver);
 }
-
-// Define other methods and classes here

@@ -1,23 +1,27 @@
 <Query Kind="Program">
   <NuGetReference>Rx-Main</NuGetReference>
   <Namespace>System.Reactive</Namespace>
+  <Namespace>System.Reactive.Linq</Namespace>
   <Namespace>System.Reactive.Subjects</Namespace>
 </Query>
 
 void Main()
 {
-	// on error exceptions
-	var values = new Subject<int>();
-	try
-	{	        
-		values.Subscribe(value => value.Dump(), error => error.Message.Dump());
-	}
-	catch (Exception ex)
-	{
-		Console.WriteLine (ex.Message.Dump() + "!!!");
-	}
-	values.OnNext(1);
-	values.OnError(new NullReferenceException());
-}
+	// hot observalbe 
+	var source = Observable.Interval(TimeSpan.FromSeconds(1));
+	var hot = Observable.Publish(source);
+	var subscription = hot.Subscribe(
+		value => Console.WriteLine ("OnNext: {0}", value),
+		error => Console.WriteLine ("OnError: {0}", error.Message),
+		() => Console.WriteLine ("OnCompleted"));
 
-// Define other methods and classes here
+	hot.Connect();
+	Thread.Sleep(6000);
+	var subscription2 = hot.Subscribe(
+		value => Console.WriteLine ("OnNext2: {0}", value),
+		error => Console.WriteLine ("OnError2: {0}", error.Message),
+		() => Console.WriteLine ("OnCompleted2"));
+		
+	Thread.Sleep(2000);
+	subscription.Dispose();
+}

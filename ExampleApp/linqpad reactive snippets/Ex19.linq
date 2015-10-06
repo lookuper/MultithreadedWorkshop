@@ -10,7 +10,6 @@ void Main()
 	var source = Observable.Range(1, 255);
 	source.Select(i => new {Number = i, Character = (char)(i + 64)}).Dump();
 
-
 	// blocking operation 
 	var interval = Observable.Interval(TimeSpan.FromSeconds(3));
 	interval.First().Dump();
@@ -20,5 +19,3 @@ void Main()
 	numbers.Dump("numbers");
 	numbers.Count().Dump("count");	
 }
-
-// Define other methods and classes here

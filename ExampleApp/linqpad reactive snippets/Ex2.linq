@@ -6,7 +6,7 @@
 
 void Main()
 {
-	// inline subscription
+	// inline subscription on observer
 	var source = Observable.Range(0, 10);
 	var subscription = source.Subscribe(
 		value => value.Dump(),
@@ -16,5 +16,3 @@ void Main()
 
 	subscription.Dispose();
 }
-
-// Define other methods and classes here

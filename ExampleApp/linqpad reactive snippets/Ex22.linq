@@ -26,5 +26,3 @@ void Main()
 //	Thread.Sleep(TimeSpan.FromSeconds(2));
 //	source.Subscribe(v => Console.WriteLine ("2s: " + v));	
 }
-
-// Define other methods and classes here

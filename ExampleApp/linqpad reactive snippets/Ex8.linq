@@ -19,5 +19,3 @@ void Main()
 	subject.OnNext("B");
 	subject.OnError(new NullReferenceException());	
 }
-
-// Define other methods and classes here

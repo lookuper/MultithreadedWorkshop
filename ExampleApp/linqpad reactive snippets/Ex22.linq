@@ -6,23 +6,24 @@
 
 void Main()
 {
-	// hot observable example
-	var source = Observable.Interval(TimeSpan.FromSeconds(1))
-		.Take(5)
-		.Publish();
 
-	source.Connect();
+	 //cold observable example
+	var source = Observable.Interval(TimeSpan.FromSeconds(1))
+		.Take(5);
+
 	source.Subscribe(v => Console.WriteLine ("1s: " + v));	
 	Thread.Sleep(TimeSpan.FromSeconds(2));
 	source.Subscribe(v => Console.WriteLine ("2s: " + v));	
-	// or here	
-	source.Connect();
 	
-	// cold observable example
+	// hot observable example	
 //	var source = Observable.Interval(TimeSpan.FromSeconds(1))
-//		.Take(5);
+//		.Take(5)
+//		.Publish();
 //
-//	source.Subscribe(v => Console.WriteLine ("1s: " + v));	
+//	source.Connect();
+//	source.Subscribe(v => Console.WriteLine("1s: " + v));
 //	Thread.Sleep(TimeSpan.FromSeconds(2));
-//	source.Subscribe(v => Console.WriteLine ("2s: " + v));	
+//	source.Subscribe(v => Console.WriteLine("2s: " + v));	
+//	// or here	
+//	source.Connect();
 }

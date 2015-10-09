@@ -6,7 +6,7 @@
 
 void Main()
 {
-	// interval example
+	// interval example	
 	var timerSpawn = Observable
 		.Interval(TimeSpan.FromSeconds(1))
 		.Take(5);
@@ -16,5 +16,6 @@ void Main()
 		error => Console.WriteLine ("OnError: {0}", error.Message),
 		() => Console.WriteLine ("OnCompleted"));
 		
+	String.Format("Current thread id: {0}", Thread.CurrentThread.ManagedThreadId).Dump();
 	var subscription = timerSpawn.Subscribe(consoleObserver);
 }

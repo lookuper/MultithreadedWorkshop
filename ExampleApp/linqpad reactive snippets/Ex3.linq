@@ -8,6 +8,7 @@ void Main()
 {
  	//observer subscription
 	var source = Observable.Range(0, 10);
+	
 	var observer = Observer.Create<int>(
 		value => value.Dump(),
 		error => error.Message.Dump(),

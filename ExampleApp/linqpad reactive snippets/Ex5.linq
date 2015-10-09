@@ -7,8 +7,9 @@
 void Main()
 {
 	// Enumberable to Observable
-	var list = new List<int>{1,2,3,4,5};
+	var list = new List<int>{ 1, 2, 3, 4, 5};
 	var source = list.ToObservable();
+	
 	var subscription = source.Subscribe(
 		value => Console.WriteLine ("OnNext: {0}", value),
 		error => Console.WriteLine ("OnError: {0}", error.Message),

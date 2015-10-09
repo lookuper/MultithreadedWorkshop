@@ -6,6 +6,7 @@
 
 void Main()
 {
+	// userfull for debug
 	// materialize
 	Observable.Range(0,10).Materialize().Dump("");
 
@@ -14,6 +15,7 @@ void Main()
 		.Take(3)
 		.Timestamp()
 		.Dump();
+		
 	Observable.Interval(TimeSpan.FromSeconds(1))
 		.Take(3)
 		.TimeInterval()

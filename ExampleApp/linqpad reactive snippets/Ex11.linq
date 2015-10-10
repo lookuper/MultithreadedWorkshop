@@ -8,4 +8,12 @@
 void Main()
 {
 	// cancel observable
+	var source = Observable.Interval(TimeSpan.FromSeconds(1));
+	var sourceDisposion = source.Subscribe(value => value.Dump());
+
+	CancellationTokenSource ts = new CancellationTokenSource();
+	ts.Token.Register(sourceDisposion.Dispose);
+	
+	Thread.Sleep(4000);
+	ts.Cancel();
 }

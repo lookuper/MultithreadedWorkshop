@@ -13,5 +13,5 @@ void Main()
 		.Take(10);
 	
 	source.SubscribeOn(Scheduler.ThreadPool)
-		.Subscribe(value => Console.WriteLine ("Thread Id: " + Thread.CurrentThread.ManagedThreadId));
+		.Subscribe(value => Console.WriteLine ("Thread Id: " + Thread.CurrentThread.ManagedThreadId));		
 }

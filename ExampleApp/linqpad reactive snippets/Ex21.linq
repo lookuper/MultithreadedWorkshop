@@ -11,5 +11,6 @@ void Main()
 		.Take(5)
 		.Select(_ => DateTime.Now)
 		.Do(value => value.Dump());
+		
 	source.Subscribe();
 }

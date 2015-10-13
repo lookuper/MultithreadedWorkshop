@@ -56,6 +56,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "linqpad reactive snippets",
 		linqpad reactive snippets\Ex7.linq = linqpad reactive snippets\Ex7.linq
 		linqpad reactive snippets\Ex8.linq = linqpad reactive snippets\Ex8.linq
 		linqpad reactive snippets\Ex9.linq = linqpad reactive snippets\Ex9.linq
+		linqpad reactive snippets\ExUI.linq = linqpad reactive snippets\ExUI.linq
 		readme.txt = readme.txt
 	EndProjectSection
 EndProject

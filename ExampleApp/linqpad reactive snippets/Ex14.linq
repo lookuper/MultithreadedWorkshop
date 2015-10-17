@@ -15,8 +15,8 @@ void Main()
 		timer.Start();
 		
 		return () => {
-		 timer.Elapsed -= (s, e) => {};
-		 timer.Dispose();
+			timer.Elapsed -= (s, e) => {};
+			timer.Dispose();
 		};
 	});
 	

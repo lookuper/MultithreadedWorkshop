@@ -6,7 +6,7 @@
 
 void Main()
 {
-	// userfull for debug
+	// useful for debug
 	// materialize
 	Observable.Range(0,10).Materialize().Dump("");
 

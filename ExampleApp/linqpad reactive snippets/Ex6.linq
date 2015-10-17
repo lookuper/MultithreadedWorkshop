@@ -9,6 +9,7 @@ void Main()
 {
 	// on error exceptions
 	var values = new Subject<int>();
+	
 	try
 	{	        
 		values.Subscribe(value => value.Dump(), error => error.Message.Dump());
@@ -17,6 +18,7 @@ void Main()
 	{
 		Console.WriteLine (ex.Message.Dump() + "!!!");
 	}
+	
 	values.OnNext(1);
 	values.OnError(new NullReferenceException());
 }

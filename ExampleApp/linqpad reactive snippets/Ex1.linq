@@ -5,7 +5,7 @@
 
 void Main()
 {
-	// create simple observer
+	// create observer
 	var o = Observer.Create<int>(
 		value => value.Dump(),
 		error => error.Message.Dump(), 
